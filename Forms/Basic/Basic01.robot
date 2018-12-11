@@ -8,9 +8,8 @@ ${FormName}
 
 *** Keywords ***
 Go_To_Create_Form
-    log to console  Going to Create Form
     click element  //*[@id="forms"]/a
-    click element  //*[@id="expandDivElement"]/span/p
+    click element  //*[@id="configure_formspec_body"]/div[2]/ul/li[1]/span[2]/a
 Set_Form_Name
     [Arguments]  ${FormNameByUser}
     log to console  Setting Form Name
@@ -48,6 +47,8 @@ change_Can submit online only
             ${fiedlValue}=  set variable  No
     click element  //*[@id='onlineForm']/div/div/div/label[text()='${fiedlValue}']
 Click_On_form_Save
+    [Arguments]  ${FormNameByUser}
     click element  //*[@id='save1']
     dismiss alert
-    page should contain element  //*[@id="formSpecModify"]/a/span[2]
+    sleep  3s
+    page should contain  ${FormNameByUser}

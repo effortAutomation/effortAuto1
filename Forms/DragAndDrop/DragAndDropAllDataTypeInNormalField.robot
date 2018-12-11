@@ -14,6 +14,7 @@ Currency_Drag_And_Drop
     drag and drop  //span[text()='Currency']   //*[@id='formFields-0']/li
     sleep  1s
     ${INPUT}=     get element attribute  //input[@value = 'Currency']@id
+    log many  ${INPUT}
     ${GetSTring1} =  Remove String Using Regexp	${INPUT}    formFieldSpecs
     ${GetSTring2} =     Remove String Using Regexp  ${GetSTring1}   [0-9]
     ${GetSTring3} =     remove string using regexp  ${GetSTring1}  ${GetSTring2}
