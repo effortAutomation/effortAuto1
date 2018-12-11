@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20181211 10:30:13.380" generator="Robot 3.1 (Python 2.7.15 on win32)">
+<suite source="E:\PyChormRobot\effortAuto1\Forms\Test\test.robot" id="s1" name="Test">
+<test id="s1-t1" name="Open_Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://nd.spoors.in/effortConfigure//opp/x?username=afsarabbas94@gmmail.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181211 10:30:13.812" level="INFO">Opening browser 'chrome' to base url 'https://nd.spoors.in/effortConfigure//opp/x?username=afsarabbas94@gmmail.com'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20181211 10:39:18.576" level="FAIL">AttributeError: 'NoneType' object has no attribute 'encode'</msg>
+<status status="FAIL" endtime="20181211 10:39:18.576" starttime="20181211 10:35:16.076"></status>
+</kw>
+<msg timestamp="20181211 10:39:18.577" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: AttributeError: 'NoneType' object has no attribute 'encode'</msg>
+<msg timestamp="20181211 10:39:18.908" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7600 x86_64)
+</msg>
+<status status="FAIL" endtime="20181211 10:39:18.908" starttime="20181211 10:30:13.811"></status>
+</kw>
+<status status="FAIL" endtime="20181211 10:39:18.909" critical="yes" starttime="20181211 10:30:13.810">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7600 x86_64)
+</status>
+</test>
+<test id="s1-t2" name="create emp group">
+<kw name="Create_emp_group" library="CreateEmpGroup">
+<arguments>
+<arg>${invisibleEmpGroupname}</arg>
+<arg>${invisibleUserName}</arg>
+</arguments>
+<assign>
+<var>${invisibleEmpGroupname}</var>
+</assign>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="employees"]/a</arg>
+</arguments>
+<msg timestamp="20181211 10:39:18.914" level="INFO">Clicking element '//*[@id="employees"]/a'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" endtime="20181211 10:39:21.832" starttime="20181211 10:39:21.832"></status>
+</kw>
+<msg timestamp="20181211 10:39:21.832" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" endtime="20181211 10:39:21.843" starttime="20181211 10:39:18.914"></status>
+</kw>
+<status status="FAIL" endtime="20181211 10:39:21.843" starttime="20181211 10:39:18.913"></status>
+</kw>
+<status status="FAIL" endtime="20181211 10:39:21.844" critical="yes" starttime="20181211 10:39:18.912">Execution terminated by signal</status>
+</test>
+<test id="s1-t3" name="Open create form page">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20181211 10:39:21.848" critical="yes" starttime="20181211 10:39:21.847">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t4" name="drag and drop field">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20181211 10:39:21.852" critical="yes" starttime="20181211 10:39:21.850">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t5" name="set invisibility">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20181211 10:39:21.860" critical="yes" starttime="20181211 10:39:21.857">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t6" name="click_on_save">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20181211 10:39:21.863" critical="yes" starttime="20181211 10:39:21.862">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t7" name="login web for invisibility">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20181211 10:39:21.888" critical="yes" starttime="20181211 10:39:21.874">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t8" name="check invisibility">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20181211 10:39:21.892" critical="yes" starttime="20181211 10:39:21.891">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20181211 10:39:21.895" starttime="20181211 10:30:13.386"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="8" pass="0">Critical Tests</stat>
+<stat fail="8" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" fail="2" combined="NOT robot:exit" pass="0">NOT robot:exit</stat>
+<stat fail="6" pass="0">robot:exit</stat>
+</tag>
+<suite>
+<stat fail="8" id="s1" name="Test" pass="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20181211 10:39:18.577" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: AttributeError: 'NoneType' object has no attribute 'encode'</msg>
+<msg timestamp="20181211 10:39:21.832" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>
