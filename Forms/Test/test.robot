@@ -12,6 +12,7 @@ ${FormNameByUser}   ByAfsar
 ${invisibleUserName}    Test Employee
 ${invisibleEmpGroupname}     InvGroup
 ${FormNameByUser1}
+${invisibleEmpGroupname1}
 *** Test Cases ***
 Open_Browser
     open browser  https://nd.spoors.in/effortConfigure//opp/x?username=afsarabbas94@gmmail.com  chrome
@@ -19,10 +20,11 @@ Open_Browser
     click element  //*[@id="manageFields"]/div[1]/span/a
 create emp group
     ${invisibleEmpGroupname}=  Create_emp_group  ${invisibleEmpGroupname}  ${invisibleUserName}
-    log many  ${invisibleEmpGroupname}
+    set suite variable  ${invisibleEmpGroupname}
 Open create form page
     go_to_create_form
     ${FormNameByUser}=   Set_Form_Name      ${FormNameByUser}
+    set suite variable  ${FormNameByUser}
     log many  ${FormNameByUser}
     change_pulish_fiedl_Value  yes
 drag and drop field
@@ -31,6 +33,7 @@ drag and drop field
     datetime_drag_and_drop  No
     Text_Drag_And_Drop  No
 set invisibility
+    sleep  5s
     click_On_Advanced_Settings  Currency    Currency
     Make_InVisibility_Base_On_Emp_Group   ${invisibleEmpGroupname}
     ok_Advance_Setting

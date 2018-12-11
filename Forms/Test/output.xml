@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20181211 10:30:13.380" generator="Robot 3.1 (Python 2.7.15 on win32)">
+<robot rpa="false" generated="20181211 12:48:13.634" generator="Robot 3.1 (Python 2.7.15 on win32)">
 <suite source="E:\PyChormRobot\effortAuto1\Forms\Test\test.robot" id="s1" name="Test">
 <test id="s1-t1" name="Open_Browser">
 <kw name="Open Browser" library="Selenium2Library">
@@ -8,23 +8,22 @@
 <arg>https://nd.spoors.in/effortConfigure//opp/x?username=afsarabbas94@gmmail.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20181211 10:30:13.812" level="INFO">Opening browser 'chrome' to base url 'https://nd.spoors.in/effortConfigure//opp/x?username=afsarabbas94@gmmail.com'</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20181211 10:39:18.576" level="FAIL">AttributeError: 'NoneType' object has no attribute 'encode'</msg>
-<status status="FAIL" endtime="20181211 10:39:18.576" starttime="20181211 10:35:16.076"></status>
+<msg timestamp="20181211 12:48:13.973" level="INFO">Opening browser 'chrome' to base url 'https://nd.spoors.in/effortConfigure//opp/x?username=afsarabbas94@gmmail.com'</msg>
+<status status="PASS" endtime="20181211 12:48:55.422" starttime="20181211 12:48:13.972"></status>
 </kw>
-<msg timestamp="20181211 10:39:18.577" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: AttributeError: 'NoneType' object has no attribute 'encode'</msg>
-<msg timestamp="20181211 10:39:18.908" level="FAIL">TimeoutException: Message: timeout
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7600 x86_64)
-</msg>
-<status status="FAIL" endtime="20181211 10:39:18.908" starttime="20181211 10:30:13.811"></status>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181211 12:48:56.802" starttime="20181211 12:48:55.423"></status>
 </kw>
-<status status="FAIL" endtime="20181211 10:39:18.909" critical="yes" starttime="20181211 10:30:13.810">TimeoutException: Message: timeout
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7600 x86_64)
-</status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="manageFields"]/div[1]/span/a</arg>
+</arguments>
+<msg timestamp="20181211 12:48:56.804" level="INFO">Clicking element '//*[@id="manageFields"]/div[1]/span/a'.</msg>
+<status status="PASS" endtime="20181211 12:49:01.838" starttime="20181211 12:48:56.803"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:49:01.841" critical="yes" starttime="20181211 12:48:13.971"></status>
 </test>
 <test id="s1-t2" name="create emp group">
 <kw name="Create_emp_group" library="CreateEmpGroup">
@@ -40,72 +39,1168 @@
 <arguments>
 <arg>//*[@id="employees"]/a</arg>
 </arguments>
-<msg timestamp="20181211 10:39:18.914" level="INFO">Clicking element '//*[@id="employees"]/a'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" endtime="20181211 10:39:21.832" starttime="20181211 10:39:21.832"></status>
+<msg timestamp="20181211 12:49:01.848" level="INFO">Clicking element '//*[@id="employees"]/a'.</msg>
+<status status="PASS" endtime="20181211 12:49:08.733" starttime="20181211 12:49:01.847"></status>
 </kw>
-<msg timestamp="20181211 10:39:21.832" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<status status="FAIL" endtime="20181211 10:39:21.843" starttime="20181211 10:39:18.914"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="empGroups"]/span[3]/a</arg>
+</arguments>
+<msg timestamp="20181211 12:49:08.734" level="INFO">Clicking element '//*[@id="empGroups"]/span[3]/a'.</msg>
+<status status="PASS" endtime="20181211 12:49:15.887" starttime="20181211 12:49:08.733"></status>
 </kw>
-<status status="FAIL" endtime="20181211 10:39:21.843" starttime="20181211 10:39:18.913"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="addEmpGroup"]</arg>
+</arguments>
+<msg timestamp="20181211 12:49:15.887" level="INFO">Clicking element '//*[@id="addEmpGroup"]'.</msg>
+<status status="PASS" endtime="20181211 12:49:26.256" starttime="20181211 12:49:15.887"></status>
 </kw>
-<status status="FAIL" endtime="20181211 10:39:21.844" critical="yes" starttime="20181211 10:39:18.912">Execution terminated by signal</status>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${getCurrentDate}</var>
+</assign>
+<msg timestamp="20181211 12:49:26.257" level="INFO">${getCurrentDate} = 2018-12-11 12:49:26.256</msg>
+<status status="PASS" endtime="20181211 12:49:26.257" starttime="20181211 12:49:26.256"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empgroupName}${getCurrentDate}</arg>
+</arguments>
+<assign>
+<var>${empgroupName}</var>
+</assign>
+<msg timestamp="20181211 12:49:26.257" level="INFO">${empgroupName} = InvGroup2018-12-11 12:49:26.256</msg>
+<status status="PASS" endtime="20181211 12:49:26.257" starttime="20181211 12:49:26.257"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="empGroupName"]</arg>
+<arg>${empgroupName}</arg>
+</arguments>
+<msg timestamp="20181211 12:49:26.258" level="INFO">Typing text 'InvGroup2018-12-11 12:49:26.256' into text field '//*[@id="empGroupName"]'</msg>
+<status status="PASS" endtime="20181211 12:49:26.690" starttime="20181211 12:49:26.258"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//option[text()='${empName}']</arg>
+</arguments>
+<msg timestamp="20181211 12:49:26.691" level="INFO">Clicking element '//option[text()='Test Employee']'.</msg>
+<status status="PASS" endtime="20181211 12:49:26.807" starttime="20181211 12:49:26.690"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="dual-list-box-Employee"]/div[2]/button[2]</arg>
+</arguments>
+<msg timestamp="20181211 12:49:26.808" level="INFO">Clicking element '//*[@id="dual-list-box-Employee"]/div[2]/button[2]'.</msg>
+<status status="PASS" endtime="20181211 12:49:26.963" starttime="20181211 12:49:26.808"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="save"]</arg>
+</arguments>
+<msg timestamp="20181211 12:49:26.964" level="INFO">Clicking element '//*[@id="save"]'.</msg>
+<status status="PASS" endtime="20181211 12:49:35.374" starttime="20181211 12:49:26.964"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181211 12:49:38.375" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181211 12:49:38.375" starttime="20181211 12:49:35.375"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Saved successfully</arg>
+</arguments>
+<msg timestamp="20181211 12:49:38.450" level="INFO">Current page contains text 'Saved successfully'.</msg>
+<status status="PASS" endtime="20181211 12:49:38.450" starttime="20181211 12:49:38.376"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${empgroupName}</arg>
+</arguments>
+<msg timestamp="20181211 12:49:38.451" level="INFO">InvGroup2018-12-11 12:49:26.256</msg>
+<status status="PASS" endtime="20181211 12:49:38.451" starttime="20181211 12:49:38.450"></status>
+</kw>
+<msg timestamp="20181211 12:49:38.451" level="INFO">${invisibleEmpGroupname} = InvGroup2018-12-11 12:49:26.256</msg>
+<status status="PASS" endtime="20181211 12:49:38.452" starttime="20181211 12:49:01.846"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${invisibleEmpGroupname}</arg>
+</arguments>
+<msg timestamp="20181211 12:49:38.455" level="INFO">${invisibleEmpGroupname} = InvGroup2018-12-11 12:49:26.256</msg>
+<status status="PASS" endtime="20181211 12:49:38.455" starttime="20181211 12:49:38.454"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:49:38.457" critical="yes" starttime="20181211 12:49:01.844"></status>
 </test>
 <test id="s1-t3" name="Open create form page">
-<tags>
-<tag>robot:exit</tag>
-</tags>
-<status status="FAIL" endtime="20181211 10:39:21.848" critical="yes" starttime="20181211 10:39:21.847">Test execution stopped due to a fatal error.</status>
+<kw name="Go_To_Create_Form" library="Basic01">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Going to Create Form</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:49:38.462" starttime="20181211 12:49:38.461"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="forms"]/a</arg>
+</arguments>
+<msg timestamp="20181211 12:49:38.463" level="INFO">Clicking element '//*[@id="forms"]/a'.</msg>
+<status status="PASS" endtime="20181211 12:49:51.210" starttime="20181211 12:49:38.463"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="expandDivElement"]/span/p</arg>
+</arguments>
+<msg timestamp="20181211 12:49:51.211" level="INFO">Clicking element '//*[@id="expandDivElement"]/span/p'.</msg>
+<status status="PASS" endtime="20181211 12:50:01.866" starttime="20181211 12:49:51.210"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:01.866" starttime="20181211 12:49:38.460"></status>
+</kw>
+<kw name="Set_Form_Name" library="Basic01">
+<arguments>
+<arg>${FormNameByUser}</arg>
+</arguments>
+<assign>
+<var>${FormNameByUser}</var>
+</assign>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Setting Form Name</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:01.870" starttime="20181211 12:50:01.869"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${getCurrentDate}</var>
+</assign>
+<msg timestamp="20181211 12:50:01.872" level="INFO">${getCurrentDate} = 2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:01.872" starttime="20181211 12:50:01.872"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${FormNameByUser}${getCurrentDate}</arg>
+</arguments>
+<assign>
+<var>${FormName}</var>
+</assign>
+<msg timestamp="20181211 12:50:01.874" level="INFO">${FormName} = ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:01.874" starttime="20181211 12:50:01.873"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${FormName}</arg>
+</arguments>
+<msg timestamp="20181211 12:50:01.876" level="INFO">${FormName} = ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:01.876" starttime="20181211 12:50:01.875"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${FormName}</arg>
+</arguments>
+<msg timestamp="20181211 12:50:01.877" level="INFO">ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:01.878" starttime="20181211 12:50:01.877"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='formTitle']</arg>
+<arg>${FormName}</arg>
+</arguments>
+<msg timestamp="20181211 12:50:01.879" level="INFO">Typing text 'ByAfsar2018-12-11 12:50:01.872' into text field '//*[@id='formTitle']'</msg>
+<status status="PASS" endtime="20181211 12:50:02.238" starttime="20181211 12:50:01.878"></status>
+</kw>
+<msg timestamp="20181211 12:50:02.239" level="INFO">${FormNameByUser} = ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:02.239" starttime="20181211 12:50:01.867"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${FormNameByUser}</arg>
+</arguments>
+<msg timestamp="20181211 12:50:02.240" level="INFO">${FormNameByUser} = ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:02.240" starttime="20181211 12:50:02.240"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${FormNameByUser}</arg>
+</arguments>
+<msg timestamp="20181211 12:50:02.241" level="INFO">ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:02.241" starttime="20181211 12:50:02.240"></status>
+</kw>
+<kw name="change_pulish_fiedl_Value" library="Basic01">
+<arguments>
+<arg>yes</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${arrgu}' == 'No'</arg>
+<arg>log many</arg>
+<arg>No</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:02.242" starttime="20181211 12:50:02.242"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Yes</arg>
+</arguments>
+<assign>
+<var>${fiedlValue}</var>
+</assign>
+<msg timestamp="20181211 12:50:02.243" level="INFO">${fiedlValue} = Yes</msg>
+<status status="PASS" endtime="20181211 12:50:02.243" starttime="20181211 12:50:02.243"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${arrgu}' == 'Yes'</arg>
+<arg>log many</arg>
+<arg>Yes</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:02.244" starttime="20181211 12:50:02.243"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>No</arg>
+</arguments>
+<assign>
+<var>${fiedlValue}</var>
+</assign>
+<msg timestamp="20181211 12:50:02.245" level="INFO">${fiedlValue} = No</msg>
+<status status="PASS" endtime="20181211 12:50:02.245" starttime="20181211 12:50:02.244"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="formSpec_body"]/div[2]/div[2]/div/div[3]/div/div/div/label[text()='${fiedlValue}']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:02.245" level="INFO">Clicking element '//*[@id="formSpec_body"]/div[2]/div[2]/div/div[3]/div/div/div/label[text()='No']'.</msg>
+<status status="PASS" endtime="20181211 12:50:02.377" starttime="20181211 12:50:02.245"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:02.378" starttime="20181211 12:50:02.241"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:02.378" critical="yes" starttime="20181211 12:49:38.459"></status>
 </test>
 <test id="s1-t4" name="drag and drop field">
-<tags>
-<tag>robot:exit</tag>
-</tags>
-<status status="FAIL" endtime="20181211 10:39:21.852" critical="yes" starttime="20181211 10:39:21.850">Test execution stopped due to a fatal error.</status>
+<kw name="Currency_Drag_And_Drop" library="DragAndDropAllDataTypeInNormalField">
+<arguments>
+<arg>Yes</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Currency_Drag_And_Drop</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:02.382" starttime="20181211 12:50:02.381"></status>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<doc>Drags element identified with `source` which is a locator.</doc>
+<arguments>
+<arg>//span[text()='Currency']</arg>
+<arg>//*[@id='formFields-0']/li</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:02.614" starttime="20181211 12:50:02.382"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:03.615" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:03.615" starttime="20181211 12:50:02.614"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = 'Currency']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:03.683" level="INFO">${INPUT} = formFieldSpecs1_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:03.683" starttime="20181211 12:50:03.616"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:03.684" level="INFO">${GetSTring1} = 1_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:03.684" starttime="20181211 12:50:03.683"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:03.685" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:03.686" starttime="20181211 12:50:03.684"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:03.687" level="INFO">${GetSTring3} = 1</msg>
+<status status="PASS" endtime="20181211 12:50:03.687" starttime="20181211 12:50:03.686"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isRequired}' == 'No'</arg>
+<arg>click element</arg>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:03.688" starttime="20181211 12:50:03.687"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>DONE</arg>
+</arguments>
+<msg timestamp="20181211 12:50:03.688" level="INFO">DONE</msg>
+<status status="PASS" endtime="20181211 12:50:03.688" starttime="20181211 12:50:03.688"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:03.689" starttime="20181211 12:50:02.381"></status>
+</kw>
+<kw name="Date_Drag_And_Drop" library="DragAndDropAllDataTypeInNormalField">
+<arguments>
+<arg>No</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Date_Drag_And_Drop</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:03.691" starttime="20181211 12:50:03.690"></status>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<doc>Drags element identified with `source` which is a locator.</doc>
+<arguments>
+<arg>//span[text()='Date']</arg>
+<arg>//*[@id='formFields-0']/li</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:03.860" starttime="20181211 12:50:03.691"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:04.860" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:04.860" starttime="20181211 12:50:03.860"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = 'Date']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:04.943" level="INFO">${INPUT} = formFieldSpecs2_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:04.944" starttime="20181211 12:50:04.861"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:04.945" level="INFO">${GetSTring1} = 2_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:04.945" starttime="20181211 12:50:04.944"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:04.947" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:04.947" starttime="20181211 12:50:04.946"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:04.948" level="INFO">${GetSTring3} = 2</msg>
+<status status="PASS" endtime="20181211 12:50:04.948" starttime="20181211 12:50:04.947"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isRequired}' == 'No'</arg>
+<arg>click element</arg>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<msg timestamp="20181211 12:50:04.951" level="INFO">Clicking element '//*[@id="formFieldSpecs2_isRequired"]'.</msg>
+<status status="PASS" endtime="20181211 12:50:05.143" starttime="20181211 12:50:04.950"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:05.143" starttime="20181211 12:50:04.949"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:05.144" starttime="20181211 12:50:03.689"></status>
+</kw>
+<kw name="DateTime_Drag_And_Drop" library="DragAndDropAllDataTypeInNormalField">
+<arguments>
+<arg>No</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>DateTime_Drag_And_Drop</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:05.147" starttime="20181211 12:50:05.146"></status>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<doc>Drags element identified with `source` which is a locator.</doc>
+<arguments>
+<arg>//span[text()='DateTime']</arg>
+<arg>//*[@id='formFields-0']/li</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:05.345" starttime="20181211 12:50:05.148"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:06.346" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:06.346" starttime="20181211 12:50:05.345"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = 'DateTime']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:06.422" level="INFO">${INPUT} = formFieldSpecs3_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:06.422" starttime="20181211 12:50:06.347"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:06.423" level="INFO">${GetSTring1} = 3_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:06.423" starttime="20181211 12:50:06.422"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:06.423" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:06.423" starttime="20181211 12:50:06.423"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:06.424" level="INFO">${GetSTring3} = 3</msg>
+<status status="PASS" endtime="20181211 12:50:06.424" starttime="20181211 12:50:06.424"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isRequired}' == 'No'</arg>
+<arg>click element</arg>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<msg timestamp="20181211 12:50:06.426" level="INFO">Clicking element '//*[@id="formFieldSpecs3_isRequired"]'.</msg>
+<status status="PASS" endtime="20181211 12:50:06.550" starttime="20181211 12:50:06.425"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:06.550" starttime="20181211 12:50:06.424"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:06.550" starttime="20181211 12:50:05.145"></status>
+</kw>
+<kw name="Text_Drag_And_Drop" library="DragAndDropAllDataTypeInNormalField">
+<arguments>
+<arg>No</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Text_Drag_And_Drop</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:06.552" starttime="20181211 12:50:06.551"></status>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<doc>Drags element identified with `source` which is a locator.</doc>
+<arguments>
+<arg>//span[text()='Text']</arg>
+<arg>//*[@id='formFields-0']/li</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:06.727" starttime="20181211 12:50:06.552"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:07.727" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:07.727" starttime="20181211 12:50:06.727"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = 'Text']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:07.797" level="INFO">${INPUT} = formFieldSpecs4_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:07.797" starttime="20181211 12:50:07.728"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:07.798" level="INFO">${GetSTring1} = 4_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:07.798" starttime="20181211 12:50:07.797"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:07.799" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:07.799" starttime="20181211 12:50:07.798"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:07.800" level="INFO">${GetSTring3} = 4</msg>
+<status status="PASS" endtime="20181211 12:50:07.800" starttime="20181211 12:50:07.799"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isRequired}' == 'No'</arg>
+<arg>click element</arg>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="formFieldSpecs${GetSTring3}_isRequired"]</arg>
+</arguments>
+<msg timestamp="20181211 12:50:07.801" level="INFO">Clicking element '//*[@id="formFieldSpecs4_isRequired"]'.</msg>
+<status status="PASS" endtime="20181211 12:50:07.923" starttime="20181211 12:50:07.801"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:07.923" starttime="20181211 12:50:07.800"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:07.924" starttime="20181211 12:50:06.551"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:07.924" critical="yes" starttime="20181211 12:50:02.380"></status>
 </test>
 <test id="s1-t5" name="set invisibility">
-<tags>
-<tag>robot:exit</tag>
-</tags>
-<status status="FAIL" endtime="20181211 10:39:21.860" critical="yes" starttime="20181211 10:39:21.857">Test execution stopped due to a fatal error.</status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:12.927" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181211 12:50:12.927" starttime="20181211 12:50:07.926"></status>
+</kw>
+<kw name="click_On_Advanced_Settings" library="HideAndVisibility">
+<arguments>
+<arg>Currency</arg>
+<arg>Currency</arg>
+</arguments>
+<kw name="click_On_Droped_Item" library="HideAndVisibility">
+<arguments>
+<arg>${FiledNewLabel}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Going to click on</arg>
+<arg>${DropedFieldName}</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:12.935" starttime="20181211 12:50:12.933"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//span[contains(@class, 'label') and text() = '${DropedFieldName}']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:12.937" level="INFO">Clicking element '//span[contains(@class, 'label') and text() = 'Currency']'.</msg>
+<status status="PASS" endtime="20181211 12:50:13.087" starttime="20181211 12:50:12.936"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:13.087" starttime="20181211 12:50:12.931"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = '${FiledOldLabel}']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:13.119" level="INFO">${INPUT} = formFieldSpecs1_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:13.119" starttime="20181211 12:50:13.087"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:13.120" level="INFO">${GetSTring1} = 1_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:13.120" starttime="20181211 12:50:13.119"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:13.120" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:13.121" starttime="20181211 12:50:13.120"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:13.121" level="INFO">${GetSTring3} = 1</msg>
+<status status="PASS" endtime="20181211 12:50:13.121" starttime="20181211 12:50:13.121"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='formFieldSpecs${GetSTring3}_dialogPick']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:13.122" level="INFO">Clicking element '//*[@id='formFieldSpecs1_dialogPick']'.</msg>
+<status status="PASS" endtime="20181211 12:50:13.495" starttime="20181211 12:50:13.122"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:13.496" starttime="20181211 12:50:12.929"></status>
+</kw>
+<kw name="Make_InVisibility_Base_On_Emp_Group" library="HideAndVisibility">
+<arguments>
+<arg>${invisibleEmpGroupname}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='empgroupcheckbox']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:13.498" level="INFO">Clicking element '//*[@id='empgroupcheckbox']'.</msg>
+<status status="PASS" endtime="20181211 12:50:13.683" starttime="20181211 12:50:13.497"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:14.684" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:14.685" starttime="20181211 12:50:13.684"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//div[@id='dual-list-box1']//li[@title='${GroupName}']/a</arg>
+</arguments>
+<msg timestamp="20181211 12:50:14.687" level="INFO">Clicking element '//div[@id='dual-list-box1']//li[@title='InvGroup2018-12-11 12:49:26.256']/a'.</msg>
+<status status="PASS" endtime="20181211 12:50:14.890" starttime="20181211 12:50:14.686"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:15.891" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:15.891" starttime="20181211 12:50:14.890"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:15.892" starttime="20181211 12:50:13.496"></status>
+</kw>
+<kw name="ok_Advance_Setting" library="HideAndVisibility">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@type='button'][@text='OK']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:15.895" level="INFO">Clicking element '//*[@type='button'][@text='OK']'.</msg>
+<status status="PASS" endtime="20181211 12:50:16.134" starttime="20181211 12:50:15.894"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:16.134" starttime="20181211 12:50:15.893"></status>
+</kw>
+<kw name="click_On_Advanced_Settings" library="HideAndVisibility">
+<arguments>
+<arg>Date</arg>
+<arg>Date</arg>
+</arguments>
+<kw name="click_On_Droped_Item" library="HideAndVisibility">
+<arguments>
+<arg>${FiledNewLabel}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Going to click on</arg>
+<arg>${DropedFieldName}</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:16.137" starttime="20181211 12:50:16.136"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//span[contains(@class, 'label') and text() = '${DropedFieldName}']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:16.139" level="INFO">Clicking element '//span[contains(@class, 'label') and text() = 'Date']'.</msg>
+<status status="PASS" endtime="20181211 12:50:16.269" starttime="20181211 12:50:16.137"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:16.270" starttime="20181211 12:50:16.135"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = '${FiledOldLabel}']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:16.295" level="INFO">${INPUT} = formFieldSpecs2_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:16.295" starttime="20181211 12:50:16.270"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:16.296" level="INFO">${GetSTring1} = 2_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:16.296" starttime="20181211 12:50:16.295"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:16.297" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:16.297" starttime="20181211 12:50:16.296"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:16.297" level="INFO">${GetSTring3} = 2</msg>
+<status status="PASS" endtime="20181211 12:50:16.298" starttime="20181211 12:50:16.297"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='formFieldSpecs${GetSTring3}_dialogPick']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:16.298" level="INFO">Clicking element '//*[@id='formFieldSpecs2_dialogPick']'.</msg>
+<status status="PASS" endtime="20181211 12:50:16.643" starttime="20181211 12:50:16.298"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:16.643" starttime="20181211 12:50:16.135"></status>
+</kw>
+<kw name="Make_InVisibility_Base_On_Emp_Group" library="HideAndVisibility">
+<arguments>
+<arg>${invisibleEmpGroupname}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='empgroupcheckbox']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:16.644" level="INFO">Clicking element '//*[@id='empgroupcheckbox']'.</msg>
+<status status="PASS" endtime="20181211 12:50:16.795" starttime="20181211 12:50:16.644"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:17.796" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:17.796" starttime="20181211 12:50:16.795"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//div[@id='dual-list-box1']//li[@title='${GroupName}']/a</arg>
+</arguments>
+<msg timestamp="20181211 12:50:17.798" level="INFO">Clicking element '//div[@id='dual-list-box1']//li[@title='InvGroup2018-12-11 12:49:26.256']/a'.</msg>
+<status status="PASS" endtime="20181211 12:50:17.952" starttime="20181211 12:50:17.797"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:18.952" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:18.952" starttime="20181211 12:50:17.952"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:18.953" starttime="20181211 12:50:16.643"></status>
+</kw>
+<kw name="ok_Advance_Setting" library="HideAndVisibility">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@type='button'][@text='OK']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:18.956" level="INFO">Clicking element '//*[@type='button'][@text='OK']'.</msg>
+<status status="PASS" endtime="20181211 12:50:19.253" starttime="20181211 12:50:18.956"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:19.254" starttime="20181211 12:50:18.954"></status>
+</kw>
+<kw name="click_On_Advanced_Settings" library="HideAndVisibility">
+<arguments>
+<arg>Text</arg>
+<arg>Text</arg>
+</arguments>
+<kw name="click_On_Droped_Item" library="HideAndVisibility">
+<arguments>
+<arg>${FiledNewLabel}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Going to click on</arg>
+<arg>${DropedFieldName}</arg>
+</arguments>
+<status status="PASS" endtime="20181211 12:50:19.257" starttime="20181211 12:50:19.256"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//span[contains(@class, 'label') and text() = '${DropedFieldName}']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:19.258" level="INFO">Clicking element '//span[contains(@class, 'label') and text() = 'Text']'.</msg>
+<status status="PASS" endtime="20181211 12:50:19.389" starttime="20181211 12:50:19.258"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:19.389" starttime="20181211 12:50:19.255"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>//input[@value = '${FiledOldLabel}']@id</arg>
+</arguments>
+<assign>
+<var>${INPUT}</var>
+</assign>
+<msg timestamp="20181211 12:50:19.417" level="INFO">${INPUT} = formFieldSpecs4_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:19.417" starttime="20181211 12:50:19.389"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${INPUT}</arg>
+<arg>formFieldSpecs</arg>
+</arguments>
+<assign>
+<var>${GetSTring1}</var>
+</assign>
+<msg timestamp="20181211 12:50:19.418" level="INFO">${GetSTring1} = 4_fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:19.418" starttime="20181211 12:50:19.417"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>[0-9]</arg>
+</arguments>
+<assign>
+<var>${GetSTring2}</var>
+</assign>
+<msg timestamp="20181211 12:50:19.419" level="INFO">${GetSTring2} = _fieldLabel</msg>
+<status status="PASS" endtime="20181211 12:50:19.419" starttime="20181211 12:50:19.418"></status>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${GetSTring1}</arg>
+<arg>${GetSTring2}</arg>
+</arguments>
+<assign>
+<var>${GetSTring3}</var>
+</assign>
+<msg timestamp="20181211 12:50:19.420" level="INFO">${GetSTring3} = 4</msg>
+<status status="PASS" endtime="20181211 12:50:19.420" starttime="20181211 12:50:19.419"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='formFieldSpecs${GetSTring3}_dialogPick']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:19.420" level="INFO">Clicking element '//*[@id='formFieldSpecs4_dialogPick']'.</msg>
+<status status="PASS" endtime="20181211 12:50:19.750" starttime="20181211 12:50:19.420"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:19.750" starttime="20181211 12:50:19.254"></status>
+</kw>
+<kw name="Make_InVisibility_Base_On_Emp_Group" library="HideAndVisibility">
+<arguments>
+<arg>${invisibleEmpGroupname}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='empgroupcheckbox']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:19.752" level="INFO">Clicking element '//*[@id='empgroupcheckbox']'.</msg>
+<status status="PASS" endtime="20181211 12:50:19.991" starttime="20181211 12:50:19.751"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:20.994" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:20.994" starttime="20181211 12:50:19.992"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//div[@id='dual-list-box1']//li[@title='${GroupName}']/a</arg>
+</arguments>
+<msg timestamp="20181211 12:50:20.996" level="INFO">Clicking element '//div[@id='dual-list-box1']//li[@title='InvGroup2018-12-11 12:49:26.256']/a'.</msg>
+<status status="PASS" endtime="20181211 12:50:21.142" starttime="20181211 12:50:20.995"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181211 12:50:22.143" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181211 12:50:22.143" starttime="20181211 12:50:21.143"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:22.144" starttime="20181211 12:50:19.750"></status>
+</kw>
+<kw name="ok_Advance_Setting" library="HideAndVisibility">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@type='button'][@text='OK']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:22.148" level="INFO">Clicking element '//*[@type='button'][@text='OK']'.</msg>
+<status status="PASS" endtime="20181211 12:50:22.345" starttime="20181211 12:50:22.147"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:22.345" starttime="20181211 12:50:22.146"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:22.347" critical="yes" starttime="20181211 12:50:07.925"></status>
 </test>
 <test id="s1-t6" name="click_on_save">
-<tags>
-<tag>robot:exit</tag>
-</tags>
-<status status="FAIL" endtime="20181211 10:39:21.863" critical="yes" starttime="20181211 10:39:21.862">Test execution stopped due to a fatal error.</status>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${FormNameByUser}</arg>
+</arguments>
+<msg timestamp="20181211 12:50:22.355" level="INFO">ByAfsar2018-12-11 12:50:01.872</msg>
+<status status="PASS" endtime="20181211 12:50:22.355" starttime="20181211 12:50:22.354"></status>
+</kw>
+<kw name="Click_On_form_Save" library="Basic01">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id='save1']</arg>
+</arguments>
+<msg timestamp="20181211 12:50:22.356" level="INFO">Clicking element '//*[@id='save1']'.</msg>
+<status status="PASS" endtime="20181211 12:50:22.617" starttime="20181211 12:50:22.356"></status>
+</kw>
+<kw name="Dismiss Alert" library="Selenium2Library">
+<doc>Returns true if alert was confirmed, false if it was dismissed</doc>
+<status status="PASS" endtime="20181211 12:50:22.634" starttime="20181211 12:50:22.617"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="formSpecModify"]/a/span[2]</arg>
+</arguments>
+<msg timestamp="20181211 12:50:36.925" level="INFO">Current page contains element '//*[@id="formSpecModify"]/a/span[2]'.</msg>
+<status status="PASS" endtime="20181211 12:50:36.926" starttime="20181211 12:50:22.634"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:36.926" starttime="20181211 12:50:22.355"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:50:36.926" critical="yes" starttime="20181211 12:50:22.353"></status>
 </test>
 <test id="s1-t7" name="login web for invisibility">
-<tags>
-<tag>robot:exit</tag>
-</tags>
-<status status="FAIL" endtime="20181211 10:39:21.888" critical="yes" starttime="20181211 10:39:21.874">Test execution stopped due to a fatal error.</status>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://nd.spoors.in/effortConfigure//opp/x?username=mailt724@gmail.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181211 12:50:36.932" level="INFO">Opening browser 'chrome' to base url 'https://nd.spoors.in/effortConfigure//opp/x?username=mailt724@gmail.com'</msg>
+<status status="PASS" endtime="20181211 12:51:51.100" starttime="20181211 12:50:36.932"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181211 12:51:52.514" starttime="20181211 12:51:51.101"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="manageFields"]/div[1]/span/a</arg>
+</arguments>
+<msg timestamp="20181211 12:51:52.515" level="INFO">Clicking element '//*[@id="manageFields"]/div[1]/span/a'.</msg>
+<status status="PASS" endtime="20181211 12:51:59.424" starttime="20181211 12:51:52.515"></status>
+</kw>
+<status status="PASS" endtime="20181211 12:51:59.426" critical="yes" starttime="20181211 12:50:36.931"></status>
 </test>
 <test id="s1-t8" name="check invisibility">
-<tags>
-<tag>robot:exit</tag>
-</tags>
-<status status="FAIL" endtime="20181211 10:39:21.892" critical="yes" starttime="20181211 10:39:21.891">Test execution stopped due to a fatal error.</status>
+<kw name="go_to_add_form" library="addForm">
+<arguments>
+<arg>${FormNameByUser}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="forms"]/a</arg>
+</arguments>
+<msg timestamp="20181211 12:51:59.433" level="INFO">Clicking element '//*[@id="forms"]/a'.</msg>
+<status status="PASS" endtime="20181211 12:52:04.952" starttime="20181211 12:51:59.433"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//p[contains(text(),'${formName}')]</arg>
+</arguments>
+<msg timestamp="20181211 12:52:04.953" level="INFO">Clicking element '//p[contains(text(),'ByAfsar2018-12-11 12:50:01.872')]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20181211 12:52:05.413" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181211 12:52:05.413" starttime="20181211 12:52:05.104"></status>
+</kw>
+<msg timestamp="20181211 12:52:05.416" level="FAIL">WebDriverException: Message: unknown error: Element &lt;p style="text-decoration: none;font-weight:bold;padding-bottom:4px;display: inline-block;width:90%;white-space: nowrap;overflow:hidden !important;text-overflow: ellipsis; color: #337ab7; font-size: 11px;font-weight: bold;"&gt;...&lt;/p&gt; is not clickable at point (359, 325). Other element would receive the click: &lt;div class="tour-backdrop"&gt;&lt;/div&gt;
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7600 x86_64)
+</msg>
+<status status="FAIL" endtime="20181211 12:52:05.416" starttime="20181211 12:52:04.952"></status>
+</kw>
+<status status="FAIL" endtime="20181211 12:52:05.417" starttime="20181211 12:51:59.432"></status>
+</kw>
+<status status="FAIL" endtime="20181211 12:52:05.417" critical="yes" starttime="20181211 12:51:59.431">WebDriverException: Message: unknown error: Element &lt;p style="text-decoration: none;font-weight:bold;padding-bottom:4px;display: inline-block;width:90%;white-space: nowrap;overflow:hidden !important;text-overflow: ellipsis; color: #337ab7; font-size: 11px;font-weight: bold;"&gt;...&lt;/p&gt; is not clickable at point (359, 325). Other element would receive the click: &lt;div class="tour-backdrop"&gt;&lt;/div&gt;
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7600 x86_64)
+</status>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" endtime="20181211 10:39:21.895" starttime="20181211 10:30:13.386"></status>
+<status status="FAIL" endtime="20181211 12:52:05.421" starttime="20181211 12:48:13.637"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="8" pass="0">Critical Tests</stat>
-<stat fail="8" pass="0">All Tests</stat>
+<stat fail="1" pass="7">Critical Tests</stat>
+<stat fail="1" pass="7">All Tests</stat>
 </total>
 <tag>
-<stat info="combined" fail="2" combined="NOT robot:exit" pass="0">NOT robot:exit</stat>
-<stat fail="6" pass="0">robot:exit</stat>
 </tag>
 <suite>
-<stat fail="8" id="s1" name="Test" pass="0">Test</stat>
+<stat fail="1" id="s1" name="Test" pass="7">Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20181211 10:39:18.577" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: AttributeError: 'NoneType' object has no attribute 'encode'</msg>
-<msg timestamp="20181211 10:39:21.832" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>

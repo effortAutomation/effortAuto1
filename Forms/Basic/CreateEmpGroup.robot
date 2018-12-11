@@ -2,6 +2,10 @@
 Documentation    Suite description
 Library   Selenium2Library
 
+
+*** Variables ***
+${empgroupName}
+
 *** Keywords ***
 Create_emp_group
     [Arguments]  ${empgroupName}  ${empName}
@@ -14,4 +18,7 @@ Create_emp_group
     click element  //option[text()='${empName}']
     click element  //*[@id="dual-list-box-Employee"]/div[2]/button[2]
     click element  //*[@id="save"]
+    sleep  3s
+    page should contain  Saved successfully
+    log many  ${empgroupName}
     [Return]  ${empgroupName}
