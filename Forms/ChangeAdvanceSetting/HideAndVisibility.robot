@@ -14,6 +14,8 @@ click_On_Advanced_Settings
     ${GetSTring2} =     Remove String Using Regexp  ${GetSTring1}   [0-9]
     ${GetSTring3} =     remove string using regexp  ${GetSTring1}  ${GetSTring2}
     click element  //*[@id='formFieldSpecs${GetSTring3}_dialogPick']
+Make_visibility_Base_On_Emp_Group
+    select from list by label   //select[@id='empGroupVisibleType']   visible
 Make_InVisibility_Base_On_Emp_Group
     [Arguments]  ${GroupName}
     click element  //*[@id='empgroupcheckbox']

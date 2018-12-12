@@ -7,6 +7,15 @@ Library   Selenium2Library
 ${FormName}
 
 *** Keywords ***
+user_logout
+    click element  //a[@class='dropdown-toggle']
+    click element  //a[contains(text(),'Logout')]
+    close browser
+Go_to_edit_form
+    [Arguments]  ${FormNameByUser}
+    click element  //*[@id="forms"]/a
+    click element  //a[contains(text(),'${FormNameByUser}')]
+    click element  //a[contains(text(),'Edit Form Design')]
 Go_To_Create_Form
     click element  //*[@id="forms"]/a
     click element  //*[@id="configure_formspec_body"]/div[2]/ul/li[1]/span[2]/a
